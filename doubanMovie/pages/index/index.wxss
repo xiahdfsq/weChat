@@ -1,0 +1,35 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.moto-container{
+    margin-top:200rpx;
+    border:1px solid #405f80;
+    width:200rpx;
+    height:80rpx;
+    border-radius:5rpx;
+    text-align:center;
+}
+.moto{
+    font-size:22rpx;
+    font-weight:bold;
+    line-height:80rpx;
+    color:#405f80;
+}

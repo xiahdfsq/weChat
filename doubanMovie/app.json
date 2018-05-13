@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/news/news",
+    "pages/index/index",
+    "pages/movies/movies",
+    "pages/news/newDetail/detail",
+    "pages/movies/more-movie/more-movie",    
+    "pages/movies/movie-detail/movie-detail"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#b3d4db",    
+    "navigationBarTextStyle":"white",
+    "navigationBarTitleText": "firstDemo",  
+    "backgroundColor":"#f10",
+    "backgroundTextStyle":"light", 
+    "backgroundColorBottom": "#f10",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": "60px"
+  },
+
+  "tabBar": {
+    "backgroundColor":"#b3d4db",
+    "color":"#a5a5a5",
+    "selectedColor":"#00aaee",
+    "list": [{
+      "pagePath": "pages/news/news",
+        "iconPath": "images/tab/yuedu.png",
+        "selectedIconPath": "images/tab/yuedu_hl.png",
+      "text": "阅读"
+    }, {
+      "pagePath": "pages/movies/movies", 
+        "iconPath": "images/tab/dianying.png",
+        "selectedIconPath": "images/tab/dianying_hl.png",
+      "text": "电影"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
