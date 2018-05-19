@@ -32,30 +32,39 @@ export class Main {
         this.dataStore.canvas = this.canvas;
         this.dataStore.ctx = this.ctx;
         this.dataStore.res = map;
-        console.log(map.get('background'))
-        // this.createBackgroundMusic();
-        // const examples = new ApiExamples(); 
+        //this.createBackgroundMusic();
+        const examples = new ApiExamples();
         this.init();
     }
 
     init() {
 
         //首先重置游戏是没有结束的
-        // this.director.isGameOver = false;
+        this.director.isGameOver = false;
         this.dataStore
+            .put('pencils', [])
             .put('background', BackGround)
-            // .put('pencils', [])            
-            // .put('land', Land)
-            // .put('birds', Birds)
-            // .put('score', Score)
-            // .put('startButton', StartButton);
-        // this.registerEvent();
+            .put('land', Land)
+            .put('birds', Birds)
+            .put('score', Score)
+            .put('startButton', StartButton);
+        this.registerEvent();
         //创建铅笔要在游戏逻辑运行之前
-        // this.director.createPencil();
-        // this.director.run();
+        this.director.createPencil();
+        this.director.run();
     }
 
-    registerEvent() { 
+    registerEvent() {
+        // this.canvas.addEventListener('touchstart', e => {
+        //     //屏蔽掉JS的事件冒泡
+        //     e.preventDefault();
+        //     if (this.director.isGameOver) {
+        //         console.log('游戏开始');
+        //         this.init();
+        //     } else {
+        //         this.director.birdsEvent();
+        //     }
+        // });
 
         wx.onTouchStart(() => {
             if (this.director.isGameOver) {

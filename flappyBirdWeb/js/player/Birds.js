@@ -21,13 +21,16 @@ export class Birds extends Sprite {
         this.clippingWidth = [34, 34, 34];
         this.clippingHeight = [24, 24, 24];
         const birdX = DataStore.getInstance().canvas.width / 4;
+        //鸟的x轴的坐标不会变化
         this.birdsX = [birdX, birdX, birdX];
         const birdY = DataStore.getInstance().canvas.height / 2;
+        //高度变化
         this.birdsY = [birdY, birdY, birdY];
         const birdWidth = 34;
         this.birdsWidth = [birdWidth, birdWidth, birdWidth];
         const birdHeight = 24;
         this.birdsHeight = [birdHeight, birdHeight, birdHeight];
+        //高度不变的设定值
         this.y = [birdY, birdY, birdY];
         this.index = 0;
         this.count = 0;

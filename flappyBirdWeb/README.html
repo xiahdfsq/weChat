@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+1:class 里面static实例中不可以调用，但是在子类中可以调用
+2:class super里面传值过去会实例化一个A并赋值给B
+<script>
+	class A{
+		constructor(age=0,name='cindy'){
+			this.age = age;
+			this.name = name;
+		}
+		say(){
+			console.log(this.age+'-'+this.name)
+		}
+	}
+	class B extends A {
+		 constructor() {
+		 	super()
+		 }
+	}
+
+	var bb = new B()
+	console.log(bb.__proto__ === A)
+</script>	
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>flappyBirdWeb</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+<canvas id="game_canvas" width="400" height="300"></canvas>
+<script>
+	var canvas = document.getElementById('game_canvas')
+	var ctx = canvas.getContext('2d')
+	var imgObj = new Image()
+	imgObj.src = './pie_up.png'
+	imgObj.onload = function(){
+
+	ctx.drawImage(this,348,0,13,100)
+	}
+</script>	
+</body>
+</html>
